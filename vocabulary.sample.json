@@ -1,0 +1,16 @@
+{
+  "user_profile": {
+    "name": "User",
+    "reading": "ユーザー"
+  },
+  "preferred_terms": [
+    { "from": "カラビナエレメンツ", "to": "Karabiner-Elements" },
+    { "from": "ドットゼッシュアールシー", "to": ".zshrc" },
+    { "from": "ゼド", "to": "Zed" },
+    { "from": "ゼッド", "to": "Zed" },
+    { "from": "カーサー", "to": "Cursor" },
+    { "from": "カーソル", "to": "Cursor" },
+    { "from": "エイチピーシーエス", "to": "HPCS" },
+    { "from": "ドットファイルズ", "to": "dotfiles" }
+  ]
+}
