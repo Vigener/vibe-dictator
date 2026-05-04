@@ -35,7 +35,7 @@ Vibe Dictator は、macOSネイティブの音声認識機能（Apple Speech）�
 * **設定ファイル (ユーザー個別):** `~/.config/vibe-dictator/vocabulary.json`
   * ※本リポジトリには `vocabulary.sample.json` を同梱しています。コピーしてご利用ください。
 * **実行バイナリ:** `~/.local/bin/vibe_dictator`
-* **APIキー管理:** `~/.zprofile` 等の環境変数 (`GEMINI_API_KEY`)
+* **APIキー管理:** `~/.config/vibe-dictator/.env` 等の環境変数 (`GEMINI_API_KEY`)
 
 ## 🚀 推奨ツール: `vibe-add` コマンド
 辞書ファイルへのアクセスを自動化するため、お使いのシェル設定ファイル（`.zshrc` 等）に以下のエイリアス/関数を追加することを推奨します。（実行には `jq` コマンドが必要です）
@@ -55,10 +55,6 @@ function vibe-add() {
 使用例: `vibe-add カラビナ Karabiner-Elements
 
 ## メモ
-
-- GNU Stowでシンボリックリンクを貼る必要があるもの。
-  - `.env` -> `~/.config/vibe-dictator/.env`
-  - `vocabulary.json`
 
 ### 1. 手動でのセットアップフロー
 新しいMacでこのアプリを使える状態にするには、以下のステップを踏みます。
@@ -80,12 +76,3 @@ function vibe-add() {
 ```bash
 make install
 ```
-
-**アプローチB：Homebrew Tapの作成（最もユーザーフレンドリー）**
-Macユーザーにとって最も馴染みのある自動化です。GitHubのリポジトリとは別に、Homebrew用のFormula（Rubyで書かれたインストール手順書）を作成することで、他人は以下のコマンドだけでインストールできるようになります。
-
-```bash
-brew tap mikoto/vibe-dictator
-brew install vibe-dictator
-```
-（ただし、LaunchAgents等の常駐化設定が絡むと少しFormulaの記述が複雑になります）。
